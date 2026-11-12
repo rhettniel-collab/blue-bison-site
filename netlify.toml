@@ -1,0 +1,61 @@
+[build]
+  publish = "public"
+
+[[redirects]]
+  from = "/visibility"
+  to = "/visibility.html"
+  status = 200
+[[redirects]]
+  from = "/services"
+  to = "/services.html"
+  status = 200
+[[redirects]]
+  from = "/markets"
+  to = "/markets.html"
+  status = 200
+[[redirects]]
+  from = "/networks"
+  to = "/networks.html"
+  status = 200
+[[redirects]]
+  from = "/formats"
+  to = "/shows.html"
+  status = 200
+[[redirects]]
+  from = "/shows"
+  to = "/shows.html"
+  status = 200
+[[redirects]]
+  from = "/looks"
+  to = "/looks.html"
+  status = 200
+[[redirects]]
+  from = "/corporate"
+  to = "/corporate.html"
+  status = 200
+[[redirects]]
+  from = "/terms"
+  to = "/terms.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/looks/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/vid/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/og/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
